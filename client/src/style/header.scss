@@ -1,0 +1,261 @@
+.header {
+    height: 124px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #1D1D1D;
+    }
+
+    .team-list-soc__item {
+        display: none;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+}
+
+.header__menu-mobile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: 2;
+}
+
+.header__logo {
+    align-self: center;
+    width: 179px;
+    height: 104px;
+    z-index: 3;
+}
+
+.header__nav-list {
+    display: flex;
+    height: 100%;
+}
+
+.nav-list__item {
+    &:not(:last-child) {
+        margin-right: 47px;
+    }
+}
+
+.header__burger-btn {
+    display: none;
+}
+
+.nav-list__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 17px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: #E9C515;
+    }
+}
+
+.header__callback {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: flex-end;
+}
+
+.callback__tel {
+    display: inline-block;
+    margin-bottom: 21px;
+    font-size: 18px;
+    line-height: 17px;
+    color: #fff;
+}
+
+.callback__btn {
+    width: 148px;
+    height: 24px;
+    background: none;
+    border: 1px solid #E9C515;
+    color: #E9C515;
+    font-size: 12px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        color: #000;
+        background-color: #E9C515;  
+    }
+}
+
+.header__phone {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+
+    .header {
+        max-width: 1024px;
+    }
+
+    .header__container {
+        max-width: 1024px;
+    }
+
+    .header__logo {
+        width: 143px;
+        height: 83px;
+    }
+
+    .header__burger-btn {
+        display: block;
+        align-self: center;
+        width: 45px;
+        height: 26px;
+        background-image: url('../img/burger-btn.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        border: none;
+        z-index: 2;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__phone {
+        left: 45%;
+        top: 50%;
+        z-index: 120;
+        position: absolute;
+        display: block;
+    }
+
+    .mobile-menu {
+        transition: all .2s ease-in-out;
+        z-index: 99;
+
+        .header__nav {
+            display: flex;
+        }
+
+        .team-list-soc__item {
+            display: flex;
+        }
+
+        .header__phone {
+            display: none;
+        }
+
+        .header__container {
+            position: relative;
+        }
+
+        .header__callback {
+            display: flex;
+        }
+
+        .header__menu-mobile {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: unset;
+            padding-top: 220px;
+            padding-bottom: 112px;
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1d1d1d;
+            transition: all .2s ease-in-out;
+        }
+
+        .header__nav-list {
+            flex-flow: column wrap;
+            align-items: center;            
+        }
+
+        .nav-list__item {
+            margin-bottom: 54px;
+            margin-right: 0;
+        }
+
+        .nav-list__link {
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 29px;
+
+            &:hover {
+                background-color: transparent;
+                color: #E9C515;
+            }
+        }
+
+        .header__callback {
+            align-items: center;
+            margin-top: 112px;
+        }
+
+        .team-list-soc__item {
+            margin-top: 0;
+        }
+
+        .callback__tel {
+            margin-top: 97px;
+        }
+
+        .header__burger-btn {
+            background-image: url('../img/close-menu.svg');
+        }
+
+    }
+
+    .header__callback {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        height: 103px;
+    }
+
+    .header__logo {
+        width: 117px;
+        height: 68px;
+    }
+
+    .header__phone {
+        left: 40%;
+        font-size: 14px;
+    }
+
+    .mobile-menu  {
+
+        .header__menu-mobile {
+            padding-top: 150px;
+        }
+
+        .header__callback {
+            margin-top: 35px;
+        }
+    }
+}

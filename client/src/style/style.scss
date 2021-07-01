@@ -1,0 +1,150 @@
+@import './normalize.css';
+@import './font.scss';
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+@import './header.scss';
+@import './hero.scss';
+@import './advantages.scss';
+@import './price.scss';
+@import './format.scss';
+@import './design.scss';
+@import './team.scss';
+@import './footer.scss';
+@import './form.scss';
+@import 'popup.scss';
+@import './slider.scss';
+@import './confidence.scss';
+
+body {
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+%section__title {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center; 
+
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
+
+%section__description {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #C4C4C4;
+
+    @media (max-width:1024px) {
+        display: none;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding-left: 405px;
+    padding-right: 405px;
+}
+
+.text__color {
+    color: #E9C515;
+}
+
+.glide--swipeable {
+    overflow-x: auto;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+@media (max-width: 1919px) {
+    .container {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .hero__bg-history {
+        left: auto;
+    }
+}
+
+@media (max-width: 1790px) {
+    .hero:after,
+    .advantages:after, 
+    .advantages:before,
+    .price:after, 
+    .price:before,
+    .format:after, 
+    .format:before,
+    .design__title:before,
+    .ellips,
+    .design:before {
+        display: none;
+    }
+
+    .design__container:after {
+        right: 250px;
+    }
+
+    .design__container:before {
+        right: 150px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .hero__bg-history {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .design__container:after {
+        right: 150px;
+    }
+
+    .design__container:before {
+        right: 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}

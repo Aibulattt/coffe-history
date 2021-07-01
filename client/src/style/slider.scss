@@ -1,0 +1,120 @@
+.glide__bullets {
+    position: initial !important;
+    display: flex;
+    justify-content: center;
+    transform: unset;
+    margin-top: 58px;
+}
+
+.glide--swipeable {
+    overflow: hidden !important;
+}
+
+.glide__slides, .glide__track {
+    overflow: visible;
+}
+
+.glide__bullet {
+    width: 15px;
+    height: 15px;
+    background-color: #545454;
+}
+
+.glide__bullet--active {
+    background-color: #E9C515;
+}
+
+.glide__slides {
+    width: 100% !important;
+}
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .glide__arrow {
+      top: 98%;
+      width: 26px;
+      height: 14px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: none;
+      box-shadow: unset;
+  }
+
+  .glide__arrow--left {
+    background-image: url('../img/arrow.svg');
+  }
+
+  .glide__arrow--right {
+    background-image: url('../img/arrow.svg');
+    transform: rotate(180deg) translateY(12px);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-container {
+    margin-top: 67px;
+    padding-top: 5px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 2px !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    align-items: flex-end !important;
+    width: 26px;
+    height: 14px;
+    bottom: 4px !important;
+    top: unset !important;
+    position: absolute !important;
+
+    &::after {
+        display: block;
+        width: 26px;
+        height: 14px;
+        content: '' !important;
+        font-family: unset !important;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.swiper-button-prev {
+    left: 20px !important;
+    &::after {
+        background-image: url('../img/arrow.svg');
+    }
+}
+
+.swiper-button-next {
+    // bottom: 14px;
+    left: auto !important;
+    &::after {
+        background-image: url('../img/arrow.svg');
+        transform: rotate(180deg);
+    }
+}
+
+.swiper-pagination {
+    position: unset !important;
+    margin-top: 58px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px !important;
+    height: 15px !important;
+    background: #C4C4C4 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #545454 !important;
+}

@@ -1,0 +1,236 @@
+.price {
+    padding-top: 91px;
+    padding-bottom: 103px;
+    background-image: url('../img/price-bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -134px;
+        left: 313px;
+        width: 255px;
+        height: 224px;
+        background-image: url('../img/cup2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -74px;
+        height: 182px;
+        transform: rotate(-20deg);
+        right: 407px;
+        width: 215px;
+        background-image: url('../img/cup1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.price__title {
+    margin-bottom: 33px;
+    @extend %section__title;
+    color: #fff;
+}
+
+.price__text {
+    @extend %section__description;
+}
+
+.price__list {
+    display: flex;
+    justify-content: center;
+}
+
+.price-list__item {
+    margin-top: 137px;
+    padding: 32px 39px 30px 39px;
+    border: 1px solid #545454;
+
+    &:not(:last-child) {
+        margin-right: 63px;
+    }
+
+    &:nth-child(2) {
+        border: 1px solid #E9C515;
+        position: relative;
+
+        &::before {
+            content: "Популярный";
+            min-width: calc(100% + 2px);
+            display: block;
+            padding-top: 19px;
+            position: absolute;
+            height: 55px;
+            line-height: 17px;
+            top: -55px;
+            left: -1px;
+            font-size: 14px;
+            font-weight: 700;
+            background: #e9c515;
+            text-align: center;
+        }
+    }
+}
+
+.price-list__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #E9C515;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -23px;
+        text-align: center;
+        width: 55px;
+        height: 2px;
+        background: #fff;
+    }
+}
+
+.price-list__service-list {
+    margin-top: 41px !important;
+}
+
+.service-list__item {
+    display: flex;
+    justify-content: space-between;
+    width: 207px;
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    &::after {
+        content: '';
+        margin-top: 7px;
+        width: 8px;
+        height: 6px;
+        background-image: url('../img/galka.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+}
+
+.service__not {
+    &::after {
+        background-image: url('../img/x.svg');
+    }
+}
+
+.service-list__text {
+    margin: 0;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 197.9%;
+    color: #fff;
+}
+
+.price-list__price {
+    margin-top: 74px;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #E9C515;
+}
+
+.price-list__option {
+    margin-top: 36px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 197.9%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.price-list__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 33px;
+    width: 226px;
+    height: 66px;
+    border: 1px solid #E9C515;
+    background: transparent;
+    font-size: 18px;
+    line-height: 22px;
+    color: #E9C515;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background: #E9C515;
+        color: #000;
+    }
+}
+
+.tarif-popular {
+    display: block;
+    margin: 0 auto;
+    margin-top: 82px;
+    padding-top: 19px;
+    text-align: center;
+    height: 55px;
+    width: 289px;
+    background: #E9C515;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.price-slider {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+
+    .price {
+        background: #1D1D1D;
+    }
+
+    .price__list {
+        display: none;
+    }
+
+    .price-list__item {
+        width: 305px !important;
+    }
+
+    .price-slider {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .price__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price-slider {
+        display: none;
+    }
+
+    .price-list__item {
+        margin-top: 56px;
+        margin-right: 0 !important;
+
+        &:nth-child(2) {
+            margin-top: 112px;
+        }
+    }
+}
